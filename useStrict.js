@@ -9,4 +9,3 @@ console.log('Start');
 
 var maVariable = 'Un script en mode strict!';
 console.log(maVariable);
-
