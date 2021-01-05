@@ -78,7 +78,7 @@ console.log(nomFn(0, 100))*/
 
 // [2,5,3,5,9,5,8] , compte les occurences de 5 => 3
 
-var tab = [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 5]
+//var tab = [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 5]
 
 /*let count = function(nb) {
     var x = 0;
@@ -91,6 +91,48 @@ var tab = [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 5]
     return x;
 }*/
 
-var freq = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+//var freq = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 
-console.log(freq([1, 1, 2, 1, 2, 3], 2));
+//console.log(freq([1, 1, 2, 1, 2, 3], 2));
+
+/*
+
+ * Ecrire un progamme JS pour obtenir la somme d'un tableau donné après avoir fait correspondre chaue élément à une 
+ * valeur en utilisant la fonction fournie
+*/
+
+const TAB = [3, 6, 1, 7, 2];
+const map = TAB.map(x => x += x)
+
+
+
+var tab2 = new Map([
+    ['i', '3'],
+    ['i', '6'],
+    ['i', '1'],
+    ['i', '7'],
+    ['i', '2']
+]);
+
+function sommeTab2(arr){
+    var res = 0;
+    for(var x in arr.entries()) { 
+        res += arr[x];
+    }
+    return res;
+}
+
+console.log(sommeTab2(tab2));
+
+
+
+/** 
+ * Ecrire un programme Javascript pour obtenir un tableau trié d'objets classés par proprietés et ordre (ASC ou DESC) 
+ */
+
+
+//const utilisateurs = [{​​ name: 'Dhia', age: 48 }​​, {​​ name: 'Alexis', age: 36 }​​, {​​ name: 'Alexis', age: 19 }​​];
+
+
+//console.log(maFn(utilisateurs, ['nom', 'age'], ['asc', 'desc']));
+//console.log(maFn(utilisateurs, ['nom', 'age']));
