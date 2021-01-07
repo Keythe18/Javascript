@@ -95,36 +95,6 @@ console.log(nomFn(0, 100))*/
 
 //console.log(freq([1, 1, 2, 1, 2, 3], 2));
 
-/*
-
- * Ecrire un progamme JS pour obtenir la somme d'un tableau donné après avoir fait correspondre chaue élément à une 
- * valeur en utilisant la fonction fournie
-*/
-
-const TAB = [3, 6, 1, 7, 2];
-const map = TAB.map(x => x += x)
-
-
-
-var tab2 = new Map([
-    ['i', '3'],
-    ['i', '6'],
-    ['i', '1'],
-    ['i', '7'],
-    ['i', '2']
-]);
-
-function sommeTab2(arr){
-    var res = 0;
-    for(var x in arr.entries()) { 
-        res += arr[x];
-    }
-    return res;
-}
-
-console.log(sommeTab2(tab2));
-
-
 
 /** 
  * Ecrire un programme Javascript pour obtenir un tableau trié d'objets classés par proprietés et ordre (ASC ou DESC) 
@@ -136,3 +106,35 @@ console.log(sommeTab2(tab2));
 
 //console.log(maFn(utilisateurs, ['nom', 'age'], ['asc', 'desc']));
 //console.log(maFn(utilisateurs, ['nom', 'age']));
+
+ 
+//Ecrire un programme JS pour créer un tableau de paires clé-valeur à partir d'un objet donné
+ 
+//{​​x : 1 , y: 2}​​ => [['x',1],['y',2]]
+
+
+/** 
+
+ * Ecrire un programme Javascript pour supprimer d'un objet les paires clé-valeurs correspondant au clé donné
+ *
+    console.log(fn({​​ x: 1, y: 2 }​​ , ['y'])); => {​​"x" : 1}​​
+    console.log(fn({​​ x: 1, y: 2, z: 3 }​​ , ['z'])); => {​​'x': 1, 'y': 2}​​
+ * 
+ */
+
+function dis(val)
+{
+document.getElementById("edu").value+=val
+ }
+//function for evaluation
+function solve()
+{
+let x = document.getElementById("edu").value
+let y = eval(x)
+document.getElementById("edu").value = y
+}
+//function for clearing the display
+function clr()
+{
+document.getElementById("edu").value = ""
+}

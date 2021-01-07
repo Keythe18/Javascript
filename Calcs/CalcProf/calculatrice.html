@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // fonction qui évalue le chiffre et envoie le resultat
+        // la fonction eval() permet d'évaluer du code JS représenté sous forme d'une chaine de caractère
+        function calcul() {
+            let x = document.getElementById("input").value;
+            let y = eval(x);
+            document.getElementById("input").value = y;
+        }
+
+        function affiche(value) {
+            document.getElementById("input").value += value;
+
+        }
+        // fonction qui efface l'écran
+        function efface() {
+            document.getElementById("input").value = "";
+        }
+    </script>
+</head>
+<style>
+    td button {
+        width: 100%
+    }
+</style>
+
+<body>
+    <table border="50">
+        <tr>
+            <td colspan="3"><input id="input"></td>
+            <td><button onclick="efface()">C</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="affiche('1')">1</button></td>
+            <td><button onclick="affiche('2')">2</button></td>
+            <td><button onclick="affiche('3')">3</button></td>
+            <td><button onclick="affiche('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="affiche('4')">4</button></td>
+            <td><button onclick="affiche('5')">5</button></td>
+            <td><button onclick="affiche('6')">6</button></td>
+            <td><button onclick="affiche('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="affiche('7')">7</button></td>
+            <td><button onclick="affiche('8')">8</button></td>
+            <td><button onclick="affiche('9')">9</button></td>
+            <td><button onclick="affiche('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="affiche('.')">.</button></td>
+            <td><button onclick="affiche('0')">0</button></td>
+            <td><button onclick="calcul()">=</button></td>
+            <td><button onclick="affiche('/')">/</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
+</html>

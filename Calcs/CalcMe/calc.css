@@ -1,0 +1,26 @@
+.contour > button {
+    font-size: 2rem;
+}
+
+.contour {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 100px);
+}
+
+.t2 {
+    grid-column: span 2;
+}
+
+.t3 {
+    grid-column: span 3;
+}
+
+.affichage {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .20);
+    display: flex;
+    padding: 10px;
+}
