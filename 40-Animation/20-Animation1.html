@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script>
+        let animation;
+
+        function init() {
+            image = document.getElementById("img");
+            image.style.position = 'relative';
+            image.style.left = '0px';
+        }
+
+        function deplacer() {
+            image.style.left = parseInt(image.style.left) + 10 + 'px'; //10px
+            animation = setTimeout(deplacer, 50);
+        }
+
+        function stopper() {
+            clearTimeout(animation);
+            image.style.left = '0px';
+        }
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+    <form>
+        <img id='img' src="cars1.jpg">
+        <center>
+            <h1 style="color:blue;">Cliquer sur les boutons pour l'animation</h1>
+            <input type="button" value="Déplacer" onclick="deplacer();"></input>
+            <input type="button" value="Stopper" onclick="stopper();"></input>
+        </center>
+    </form>
+</body>
+
+</html>

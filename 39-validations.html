@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validation() {
+            var noms = document.base.nom.value;
+            var prenoms = document.base.prenom.value;
+            var telephones = document.base.tel.value;
+            var emails = document.base.mail.value;
+
+            if (noms == "") {
+                alert("Le champs Nom est requis");
+                return false;
+            }
+            if (noms.length < 3) {
+                alert("la longueur du nom ne doit pas etre inférieure à 3");
+                return false;
+            }
+            at = emails.indexOf("@");
+            dot = emails.lastIndexOf(".");
+            if (at < 1 || dot - at < 2) {
+                alert("Le champs E-mail est incorrect ");
+                return false;
+            }
+            if (prenoms == "") {
+                alert("Le champs Prenom est requis");
+                return false;
+            }
+            if (telephones == "") {
+                alert("Le champs Téléphone est requis");
+                return false;
+            }
+            if (telephones.length < 10 || telephones.length > 10) {
+                alert("Le numéro de téléphone doit etre composé de 10 chiffres");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1> Validation des formulaire</h1>
+        <form name="base" action="#" onsubmit="return validation()">
+            <table cellspacing="2" cellpadding="2" border="1">
+                <tr>
+                    <td> Nom : </td>
+                    <td><input type="text" name="nom"></td>
+                </tr>
+                <tr>
+                    <td> Prenom : </td>
+                    <td><input type="text" name="prenom"></td>
+                </tr>
+                <tr>
+                    <td> Téléphone : </td>
+                    <td><input type="number" name="tel"></td>
+                </tr>
+                <tr>
+                    <td> Email : </td>
+                    <td><input type="email" name="mail"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Valider">
+        </form>
+
+        <p id="p1"></p>
+    </center>
+</body>
+
+</html>

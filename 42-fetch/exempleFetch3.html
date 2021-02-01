@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fetch("./fichierJ.json") // fetch lui faut un argument obligatoire (L'URL vers le fichier à charger)
+            .then(response => response.json()) // indiquer le format de réponse souhaité
+            //response.json() renvoie une promesse contenant la réponse a la demande en json
+            .then(response => alert(JSON.stringify(response))) // on a utiliser JSON.stringify() pour transformer 
+            //l'objet JSON en une chaine JSON et on affiche cette chaine
+            .catch(error => alert("Erreur : " + error)); //on traite les erreurs avec le bloc catch et on affiche 
+        // l'erreur rencontrée si on rencontre une
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let image = null;
+
+        function init() {
+            image = document.getElementById("img");
+            image.style.position = 'relative';
+            image.style.left = '50px'
+        }
+
+        function deplacer() {
+            image.style.left = parseInt(image.style.left) + 100 + 'px'; // 150px
+        }
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+    <form>
+        <img id='img' src="cars1.jpg" />
+        <center>
+            <p>cliquer sur le bouton pour déplacer l'image</p>
+            <input type="button" value="Cliquer" onclick="deplacer();"></input>
+        </center>
+    </form>
+</body>
+
+</html>

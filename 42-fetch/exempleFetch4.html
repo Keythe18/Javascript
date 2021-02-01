@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <p id="ctrl"></p>
+    </fieldset>
+    <script>
+        var ctrlVar = document.getElementById('ctrl');
+        async function chargerCtrl(nom) {
+            try {
+                var reponse = await fetch(nom);
+                var maVar = await reponse.json();
+                ctrl.innerHTML = JSON.stringify(maVar);
+            } catch (erreur) {
+                ctrl.innerHTML = "Erreur de chargemenent " + nom + " " + erreur;
+            }
+        }
+        //chargerCtrl("fichier.json") => afficher l'erreur
+        chargerCtrl("fichierJ.json") // fonctionne bien
+    </script>
+</body>
+
+</html>

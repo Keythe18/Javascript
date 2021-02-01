@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Dans le cas d'une image , fetch renvoie un blob avec la méthode blob() 
+La balise img nécessite une URL qui va etre attribuer a l'attribut src 
+on convertit le contenu obtenu par fetch en URL avec la méthode createObjectURL de l'URL -->
+
+<body>
+    <fieldset>
+        <img id="img"></img>
+    </fieldset>
+    <script>
+        var image = document.getElementById("img");
+
+        async function chargerImage(nom) {
+            var reponse = await fetch(nom);
+            img.src = URL.createObjectURL(await reponse.blob());
+
+        }
+        chargerImage('cars1.jpg');
+    </script>
+</body>
+
+</html>
